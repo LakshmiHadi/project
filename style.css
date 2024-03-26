@@ -63,3 +63,19 @@ nav ul li{
     width: 80vw;
     text-align: center;
 }
+.songItems{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    width: 80%;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+
+}
+.songItems img{
+    width: 43px;
+    margin: 0 23px 0 23px;
+}
