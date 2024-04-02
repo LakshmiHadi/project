@@ -8,12 +8,15 @@ let myProgressBar = document.getElementById('myprogressBar');
 let gif = document.getElementById('gif');
 
 let songs = [
-    {songName: "salam-e-Ishq",filePath: "song/1.mp3",coverPath: "covers/1.jpg"},
-    {songName: "salam-e-Ishq",filePath: "song/1.mp3",coverPath: "covers/1.jpg"},
-    {songName: "salam-e-Ishq",filePath: "song/1.mp3",coverPath: "covers/1.jpg"},
-    {songName: "salam-e-Ishq",filePath: "song/1.mp3",coverPath: "covers/1.jpg"},
-    {songName: "salam-e-Ishq",filePath: "song/1.mp3",coverPath: "covers/1.jpg"},
-    {songName: "salam-e-Ishq",filePath: "song/1.mp3",coverPath: "covers/1.jpg"},
+    {songName: "salam-e-Ishq",filePath: "songs/1.mp3",coverPath: "covers/1.jpg"},
+    {songName: "salam-e-Ishq",filePath: "songs/2.mp3",coverPath: "covers/2.jpg"},
+    {songName: "salam-e-Ishq",filePath: "songs/3.mp3",coverPath: "covers/3.jpg"},
+    {songName: "salam-e-Ishq",filePath: "songs/4.mp3",coverPath: "covers/4.jpg"},
+    {songName: "salam-e-Ishq",filePath: "songs/5.mp3",coverPath: "covers/5.jpg"},
+    {songName: "salam-e-Ishq",filePath: "songs/6.mp3",coverPath: "covers/6.jpg"},
+    {songName: "salam-e-Ishq",filePath: "songs/7.mp3",coverPath: "covers/7.jpg"},
+    {songName: "salam-e-Ishq",filePath: "songs/8.mp3",coverPath: "covers/8.jpg"},
+    {songName: "salam-e-Ishq",filePath: "songs/9.mp3",coverPath: "covers/9.jpg"},
 ]
 let audioElement = new Audio('1.mp3');
 // audioElement.play();
@@ -34,7 +37,12 @@ masterPlay.addEventListener('click',()=>{
     }
 })
 //Listen to Events
-document.addEventListener('timeupdate',()=>{
+audioElement.addEventListener('timeupdate',()=>{
     console.log('timeupdate');
     // update Seekbar
+    progress = parseInt((audioElement.currentTime/audioElement.duration)* 100);
+    myProgressBar.value = progress;
+})
+myProgressBar.addEventListener('change', ()=>{
+    audioElement.currentTime = myProgressBar.value * audioElement.duration/100;
 })
