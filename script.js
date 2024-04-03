@@ -6,6 +6,7 @@ let audioElement = new Audio('1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myprogressBar');
 let gif = document.getElementById('gif');
+let songItems = Array.frace(document.getElementsByClassName('songItem'));
 
 let songs = [
     {songName: "salam-e-Ishq",filePath: "songs/1.mp3",coverPath: "covers/1.jpg"},
@@ -18,7 +19,13 @@ let songs = [
     {songName: "salam-e-Ishq",filePath: "songs/8.mp3",coverPath: "covers/8.jpg"},
     {songName: "salam-e-Ishq",filePath: "songs/9.mp3",coverPath: "covers/9.jpg"},
 ]
-let audioElement = new Audio('1.mp3');
+
+songItems.forEach((element, i)=>{
+    console.log(element, i);
+    element.getElementByTagName("img")[0].src = songs[i].filePath;
+
+})
+
 // audioElement.play();
 
 //Handle play/pause click
