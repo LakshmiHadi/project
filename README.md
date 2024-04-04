@@ -25,26 +25,5 @@ This Spotify clone aims to replicate the core functionalities of the original Sp
 - **Personalization**: Receive recommendations based on listening history and preferences.
 - **Social Features**: Follow other users, share playlists, and see what friends are listening to.
 
-## Installation
 
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/your_username/spotify-clone.git
-    ```
-
-2. Install dependencies:
-
-    ```bash
-    cd spotify-clone
-    npm install
-    ```
-
-3. Set up environment variables (if applicable).
-
-4. Start the application:
-
-    ```bash
-    npm start
-    ```
 
