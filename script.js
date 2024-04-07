@@ -55,7 +55,8 @@ myProgressBar.addEventListener('change', ()=>{
 })
 const makeAllPlays = ()=>{
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
-        element.classList.add('sa-pause-circle');
+        element.classList.remove('sa-play-circle');
+        element.classList.add('sa-play-circle');
     })
 }
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
@@ -64,5 +65,8 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         makeAllPlays();
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
+        audioElement.src = 'songs/3.mp3';
+        audioElement.currentTime = 0;
+        audioElement.play();
     })
 })
