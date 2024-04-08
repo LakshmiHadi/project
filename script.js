@@ -61,12 +61,27 @@ const makeAllPlays = ()=>{
 }
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
     element.addEventListener('click',(e)=>{
-        console.log(e.target);
         makeAllPlays();
+        songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioElement.src = 'songs/3.mp3';
+        audioElement.src = 'songs/${songIndex+1}.mp3';
         audioElement.currentTime = 0;
         audioElement.play();
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
     })
+})
+document.getElementById('next').addEventListener('click', ()=>{
+    if(songIndex>9){
+        songIndex = 0
+    }
+    else{
+        songIndex +=1;
+    }
+    audioElement.src = 'songs/${songIndex+1}.mp3';
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
 })
