@@ -41,7 +41,7 @@ masterPlay.addEventListener('click',()=>{
         audioElement.pause();
         masterPlay.classList.remove('fa-pause-circle');
         masterPlay.classList.add('fa-play-circle');
-        gif.style.opacity = 1;
+        gif.style.opacity = 0;
     }
 })
 //Listen to Events
@@ -70,6 +70,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
+        gif.style.opacity = 1;
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
     })
