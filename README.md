@@ -25,5 +25,10 @@ This Spotify clone aims to replicate the core functionalities of the original Sp
 - **Personalization**: Receive recommendations based on listening history and preferences.
 - **Social Features**: Follow other users, share playlists, and see what friends are listening to.
 
+- The Playlist 
+The Playlist sequences (plays) all elements of the project to make the final song. The Playlist window is a stack of multi-purpose 'Clip Tracks' that can hold Pattern Clips, Audio Clips and Automation Clips. Unlike most other sequencers, the Playlist tracks are not bound to a single instrument, audio recording or even Clip type. You can put any Clip type anywhere and even overlay Clips. Clips function like notes in the Piano roll. When the play-head reaches a Clip, FL Studio plays whatever the Clip instructs it to do. This also means Clip Tracks are not bound to Mixer tracks, rather Channel Rack to Mixer routing of instruments used by Clips decides the Mixer track/s that are used.
+
+By default Instrument Channels are bound to Mixer tracks, not Playlist tracks. For example, a single Pattern Clip on a single Playlist track, could trigger every Channel Rack instrument, and so all Mixer tracks if they were routed accordingly. If you want to simulate traditional sequencer workflow you can use 'Track Mode'. Do this by dropping Instruments or Samples on Playlist Track headers to create a link from the Instrument Channel <> Playlist <> Mixer. Any Change to name or color will ripple through this chain. Playlist tracks linked this way are known as Instrument or Audio Tracks depending on what the Channel Instrument is, an Instrument or Audio Clip. NOTE: This is mainly a visual/organizational feature, and the Instrument Channel will still respond to Pattern Clips on other Playlist tracks.
+
 
 
