@@ -27,6 +27,8 @@ This Spotify clone aims to replicate the core functionalities of the original Sp
 - 
 - The Playlist 
 The Playlist sequences (plays) all elements of the project to make the final song. The Playlist window is a stack of multi-purpose 'Clip Tracks' that can hold Pattern Clips, Audio Clips and Automation Clips. Unlike most other sequencers, the Playlist tracks are not bound to a single instrument, audio recording or even Clip type. You can put any Clip type anywhere and even overlay Clips. Clips function like notes in the Piano roll. When the play-head reaches a Clip, FL Studio plays whatever the Clip instructs it to do. This also means Clip Tracks are not bound to Mixer tracks, rather Channel Rack to Mixer routing of instruments used by Clips decides the Mixer track/s that are used.
+![spotify_logo](https://github.com/LakshmiHadi/project/assets/149565944/f6bfc762-fbdf-4792-85fa-3c231454a059)
+
 
 
 
